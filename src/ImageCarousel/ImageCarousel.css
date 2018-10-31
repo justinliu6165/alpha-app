@@ -1,0 +1,89 @@
+.container-image-carousel {
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+
+.carousel-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: auto;
+    transition: left 0.4s;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.img-wrapper {
+    width: 400px;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.img-wrapper img {
+    width: 400px;
+    height: auto;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    /* left: 95%; */
+}
+
+.arrow-left {
+    /* left: 4%; */
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/* css transition */
+
+/*appear on age load*/
+
+.changeFade-appear {
+    opacity: 0;
+    z-index: 1;
+}
+.changeFade-appear.changeFade-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* enter */
+
+.changeFade-enter {
+    transform: translateX(150%);
+}
+
+.changeFade-enter.changeFade-enter-active {
+    transform: translateX(50%);
+    transition: transform 1000ms ease;
+}
+  
+/* exit */
+
+.changeFade-exit {
+    transform: translateX(-50%);
+}
+
+.changeFade-exit.changeFade-exit-active {
+    transform: translateX(-200%);
+    transition: transform 1000ms ease;
+}
+
+.changeFade-exit-done {
+    transform: translateX(-200%);
+}

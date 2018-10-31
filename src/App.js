@@ -7,11 +7,14 @@ import FloorPlan from './FloorPlan/FloorPlan';
 import FAQ from './FAQ/FAQ';
 import Contact from './Contact/Contact';
 
+import ImageCarousel from './ImageCarousel/ImageCarousel';
+
 export default class App extends React.Component {
   render() {
     return (
       <div className="App">
         <Header />
+        <ImageCarousel/>
         <AboutUs />
         {/* <Filters /> */}
         <FloorPlan />
